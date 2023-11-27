@@ -1,0 +1,9 @@
+﻿<Application x:Class="Autocad_lisp_layers_add_descriptions_27_11_2023.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Autocad_lisp_layers_add_descriptions_27_11_2023"
+             StartupUri="Window1.xaml">
+    <Application.Resources>
+         
+    </Application.Resources>
+</Application>
