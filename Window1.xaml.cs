@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Xml.Linq;
 
 namespace Autocad_lisp_layers_add_descriptions_27_11_2023
 {
@@ -64,6 +65,10 @@ namespace Autocad_lisp_layers_add_descriptions_27_11_2023
                 //  // добавляем пояснения из текстбокса в строку
                 foreach (var item in massTextBoxDescriptions)
                 {
+                    // пробуем добавить множественное пояснение
+                    //Laysbor.Append("(vla - put - description");
+                    //Laysbor.Append("((vlax - ename->vla - object(tblobjname \"LAYER\" kab))");
+                    // если что удалить множественное пояснение
                     Laysbor.Append(" \"");
                     Laysbor.Append(item);
                     Laysbor.Append("\" ");
