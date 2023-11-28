@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,14 +20,15 @@ namespace Autocad_lisp_layers_add_descriptions_27_11_2023
             str.Append("  (vl-load-com)\r\n");
             str.Append("(setq l (TBLOBJNAME \"layer\" \"1\"))\r\n");
             str.Append("(entget l '(\"*\"))\r\n");
-            str.Append("(entget l '(\"*\"))\r\n");
             str.Append("(foreach kab '( ");
             return str; 
         }
+        // здесь будет сбор имен слоёв
 
         // предконец сбора файла lisp
         public StringBuilder end()
         {
+            str = new StringBuilder();
             str.Append(")\r\n    ");
             str.Append("(vla-put-description\r\n ");
             str.Append("(vlax-ename->vla-object (tblobjname \"LAYER\" kab))\r\n ");
@@ -33,12 +36,17 @@ namespace Autocad_lisp_layers_add_descriptions_27_11_2023
         }
         // вписываем пояснения которые берем из текстбокса
 
-
         public StringBuilder endof()
         {
-            str.Append("    )\r\n  )\r\n\r\n)");
+            str = new StringBuilder();
+            str.Append("\n) )\r\n ");
+            // завершение файла
+            str.Append("(alert \"You win\")\n");
+            str.Append(")");
             return str;
         }
 
+        // пробуем mvvm
+       
     }
 }

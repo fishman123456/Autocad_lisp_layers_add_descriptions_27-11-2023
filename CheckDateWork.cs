@@ -25,7 +25,7 @@ namespace Autocad_lisp_layers_add_descriptions_27_11_2023
             }
             else
             {
-                MessageBox.Show("Работайте до   " + dt2.ToString());
+                //MessageBox.Show("Работайте до   " + dt2.ToString());
             }
 
         }

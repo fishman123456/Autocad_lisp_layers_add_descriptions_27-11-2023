@@ -31,10 +31,10 @@
         <!-- текстбоксы для ввода данных  -->
         
         <TextBox Name="TextBoxLayName" Grid.Row="1" Grid.Column="0" Grid.RowSpan="7" Grid.ColumnSpan="2" Margin="10"
-           AcceptsReturn="True" VerticalScrollBarVisibility="Auto"  />
+           AcceptsReturn="True" VerticalScrollBarVisibility="Auto" x:FieldModifier="public" />
 
         <TextBox Name="TextBoxDescriptions" Grid.Row="1" Grid.Column="2" Grid.RowSpan="7" Grid.ColumnSpan="2" Margin="10"
-              AcceptsReturn="True" VerticalScrollBarVisibility="Auto"/>
+              AcceptsReturn="True" VerticalScrollBarVisibility="Auto" x:FieldModifier="public"/>
         
         <!-- названия текстбоксов  -->
         
@@ -44,11 +44,14 @@
         <TextBlock x:Name="TextBoxDescriptionsName" TextWrapping="Wrap" Text="Пояснение" Grid.ColumnSpan="2" 
             HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20" Grid.Column="2"/>
 
-        <Button Name="Button_Save_as" Content="Сохранить в файл" Grid.Row="9" Grid.Column="4" Grid.ColumnSpan="2"
-          Margin="10" Click="Button_Save_as_Click"/>
+        <Button Name="ButtonBuildFile" Content="Собрать файл" Grid.Row="8" Grid.Column="0" Grid.ColumnSpan="2"
+          Margin="10" Click="ButtonBuildFile_Click" />
+        
+        <Button Name="ButtonSaveFile" Content="Сохранить в файл" Grid.Row="9" Grid.Column="2" Grid.ColumnSpan="2"
+          Margin="10" Click="ButtonSaveFile_Click" />
 
-        <Button Name="Button_Clear_ALL" Content="Очистить всё" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2"
-         Margin="10" Click="Button_Clear_ALL_Click" />
+        <Button Name="ButtonClearALL" Content="Очистить всё" Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2"
+         Margin="10" Click="ButtonClearALL_Click"  />
 
     </Grid>
 </Window>
