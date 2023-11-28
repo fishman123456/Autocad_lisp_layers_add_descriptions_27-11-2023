@@ -29,7 +29,7 @@ namespace Autocad_lisp_layers_add_descriptions_27_11_2023
         public StringBuilder end()
         {
             str = new StringBuilder();
-            str.Append(")\r\n    ");
+            str.Append(")\r\n)    ");
             str.Append("(vla-put-description\r\n ");
             str.Append("(vlax-ename->vla-object (tblobjname \"LAYER\" kab))\r\n ");
             return str;
