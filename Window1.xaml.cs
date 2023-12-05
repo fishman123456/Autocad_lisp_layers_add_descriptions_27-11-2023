@@ -29,7 +29,8 @@ namespace Autocad_lisp_layers_add_descriptions_27_11_2023
 
         private void ButtonClearALL_Click(object sender, RoutedEventArgs e)
         {
-
+            TextBlockLayerName.Text = string.Empty;
+            TextBoxDescriptionsName.Text = string.Empty;
         }
         // 28-11-2023 начало положено 9-15
         // Нужно добавить из текстбокса слои и пояснения к ним
@@ -86,7 +87,7 @@ namespace Autocad_lisp_layers_add_descriptions_27_11_2023
 
         private void ButtonBuildFile_Click(object sender, RoutedEventArgs e)
         {
-
+            MessageBox.Show("Не заполненyое");
         }
     }
 }

@@ -17,9 +17,7 @@ namespace Autocad_lisp_layers_add_descriptions_27_11_2023
         public StringBuilder begin()
         {
             str.Append("(defun C:descrip (/ x1 x2 x3)\r\n");
-            str.Append("  (vl-load-com)\r\n");
-            str.Append("(setq l (TBLOBJNAME \"layer\" \"1\"))\r\n");
-            str.Append("(entget l '(\"*\"))\r\n");
+            str.Append("(vl-load-com)\r\n");
             str.Append("(foreach kab '( ");
             return str; 
         }
@@ -29,7 +27,7 @@ namespace Autocad_lisp_layers_add_descriptions_27_11_2023
         public StringBuilder end()
         {
             str = new StringBuilder();
-            str.Append(")\r\n)    ");
+            str.Append(")\r\n");
             str.Append("(vla-put-description\r\n ");
             str.Append("(vlax-ename->vla-object (tblobjname \"LAYER\" kab))\r\n ");
             return str;
@@ -39,7 +37,7 @@ namespace Autocad_lisp_layers_add_descriptions_27_11_2023
         public StringBuilder endof()
         {
             str = new StringBuilder();
-            str.Append("\n) )\r\n ");
+            str.Append("\n)\n)\n");
             // завершение файла
             str.Append("(alert \"You win\")\n");
             str.Append(")");
