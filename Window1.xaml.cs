@@ -29,8 +29,12 @@ namespace Autocad_lisp_layers_add_descriptions_27_11_2023
 
         private void ButtonClearALL_Click(object sender, RoutedEventArgs e)
         {
-            TextBlockLayerName.Text = string.Empty;
-            TextBoxDescriptionsName.Text = string.Empty;
+            TextBoxDescriptions.Text = string.Empty;
+            TextBoxLayName.Text = string.Empty;
+            // построитель строки для сохранения в файл
+            StringBuilder sbor = new StringBuilder();
+            // построитель строки для сохранения из текстбокса
+            StringBuilder Laysbor = new StringBuilder();
         }
         // 28-11-2023 начало положено 9-15
         // Нужно добавить из текстбокса слои и пояснения к ним
